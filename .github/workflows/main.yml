@@ -14,7 +14,7 @@ jobs:
           - run: echo 'echo "FROM python:3.6.2' >> test.sh
           - run: echo "ADD ./hello.py /hello/" >> test.sh
           - run: echo "WORKDIR /hello" >> test.sh
-          - run: echo 'CMD [\"python\",\"hello.py\"]' >> dockerfile" >> test.sh
+          - run: echo 'CMD [\"python\",\"hello.py\"] >> dockerfile' >> test.sh
           - run: cat test.sh
   job2:
       runs-on: ubuntu-latest
