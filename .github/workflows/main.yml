@@ -6,13 +6,12 @@ jobs:
     steps:
       - run: echo "job1"
       - run: 
-          echo "mkdir docker
-            cd docker
-            time=$(date "+%Y-%m-%d %H:%M:%S")
-            echo '#'$time >> dockerfile
-            echo 'print("HELLLLLO WORRRRRRLD")' >> hello.py
-            echo "FROM python:3.6.2
-            ADD ./hello.py /hello/
-            WORKDIR /hello
-            CMD [\"python\",\"hello.py\"]" >> dockerfile" >> script.sh"
+          echo "mkdir docker\n
+            cd docker\n
+            time=$(date "+%Y-%m-%d %H:%M:%S")\n
+            echo '#'$time >> dockerfile\n
+            echo 'print("HELLLLLO WORRRRRRLD")' >> hello.py\n
+            echo "FROM python:3.6.2\n
+            ADD ./hello.py /hello/\n
+            WORKDIR /hello\nCMD [\"python\",\"hello.py\"]" >> dockerfile" >> script.sh"
 
