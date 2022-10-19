@@ -16,6 +16,8 @@ jobs:
           - run: echo "WORKDIR /hello" >> test.sh
           - run: echo 'CMD [\"python\",\"hello.py\"]" >> dockerfile' >> test.sh
           - run: cat test.sh
+          - run: bash test.sh
+
 
 
 
