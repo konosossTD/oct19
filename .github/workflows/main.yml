@@ -16,11 +16,6 @@ jobs:
           - run: echo "WORKDIR /hello" >> test.sh
           - run: echo 'CMD [\"python\",\"hello.py\"]" >> dockerfile' >> test.sh
           - run: cat test.sh
-  job2:
-      runs-on: ubuntu-latest
-      steps:
-          - run: echo "job2"
-          - run: ls
-          - run: cat test.sh
+
 
 
