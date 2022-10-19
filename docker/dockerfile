@@ -1,0 +1,7 @@
+#2022-10-18 18:58:52
+FROM python:3.6.2
+#COPY requirements.txt ./
+#RUN pip install  -r requirments.txt -i https://mirrors.aliyun.com/pypi/simple
+ADD ./hello.py /hello/
+WORKDIR /hello
+CMD ["python","hello.py"]
