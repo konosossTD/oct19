@@ -6,4 +6,5 @@ jobs:
     steps:
       - run: echo "job1"
       - run: pwd 
+      - run: ls ../ 
       - run: echo $(date "+%Y.%m.%d")
