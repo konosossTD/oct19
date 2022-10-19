@@ -5,6 +5,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "job1"
-      - run: pwd 
-      - run: ls ../ 
-      - run: echo $(date "+%Y.%m.%d")
+      - run: 
+          echo "mkdir docker
+            cd docker
+            time=$(date "+%Y-%m-%d %H:%M:%S")
+            echo '#'$time >> dockerfile
+            echo 'print("HELLLLLO WORRRRRRLD")' >> hello.py
+            echo "FROM python:3.6.2
+            ADD ./hello.py /hello/
+            WORKDIR /hello
+            CMD [\"python\",\"hello.py\"]" >> dockerfile" >> script.sh"
+
