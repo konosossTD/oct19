@@ -6,8 +6,7 @@ jobs:
     steps:
       - run: echo "job1"
       - run: 
-            echo "mkdir docker\ncd docker\ntime=$(date '+%Y-%m-%d %H:%M:%S')\necho '#'$time >> dockerfile\necho 'print('HELLLLLO WORRRRRRLD')' >> hello.py\n
-            echo 'FROM python:3.6.2\nADD ./hello.py /hello/\nWORKDIR /hello\nCMD [\"python\",\"hello.py\"]" >> dockerfile" >> script.sh'
-      - run: pwd 
+              echo 'mkdir docker\ncd docker\ntime=$(date "+%Y-%m-%d %H:%M:%S")\necho '#'$time >> dockerfile\necho 'print("HELLLLLO WORRRRRRLD")' >> hello.py\necho "FROM python:3.6.2\nADD ./hello.py /hello/\nWORKDIR /hello\nCMD [\"python\",\"hello.py\"]" >> dockerfile' >>test.sh
+      - run: cat test.sh
   
 
