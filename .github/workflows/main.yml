@@ -5,5 +5,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "job1"
-      - run: echo || pwd 
+      - run: pwd 
       - run: echo $(date "+%Y.%m.%d")
